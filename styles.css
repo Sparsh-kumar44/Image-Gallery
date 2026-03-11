@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 *{
 margin:0;
 padding:0;
@@ -5,49 +7,55 @@ box-sizing:border-box;
 }
 
 body{
-font-family: Arial, Helvetica, sans-serif;
-
-/* Improved background */
-background: linear-gradient(135deg,#1f1c2c,#928dab);
-min-height:100vh;
+font-family:'Poppins',sans-serif;
+background:black;
 color:white;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
 /* HEADER */
 
 header{
+width:100%;
 text-align:center;
-padding:40px 20px;
+padding:40px 0;
 }
 
 header h1{
 font-size:3rem;
-letter-spacing:2px;
+letter-spacing:3px;
 }
 
-/* CONTAINER */
+/* MAIN CONTAINER */
 
 .container{
+width:100%;
 max-width:1200px;
-margin:auto;
 padding:20px;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
 /* GALLERY */
 
 .gallery{
+width:100%;
 display:flex;
 flex-wrap:wrap;
-gap:20px;
 justify-content:center;
+gap:25px;
 }
 
 .card{
-width:calc(33.33% - 20px);
-position:relative;
+width:300px;
 border-radius:12px;
 overflow:hidden;
-transition:transform 0.4s;
+position:relative;
+transition:0.4s;
 }
 
 .card img{
@@ -73,8 +81,9 @@ bottom:0;
 left:0;
 width:100%;
 padding:15px;
-font-size:16px;
-background:linear-gradient(to top,rgba(0,0,0,0.7),transparent);
+text-align:center;
+font-size:14px;
+background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);
 opacity:0;
 transition:0.4s;
 }
@@ -88,25 +97,6 @@ opacity:1;
 footer{
 text-align:center;
 padding:30px;
-margin-top:40px;
 font-size:14px;
-opacity:0.9;
-}
-
-/* RESPONSIVE */
-
-@media (max-width:900px){
-.card{
-width:calc(50% - 20px);
-}
-}
-
-@media (max-width:600px){
-.card{
-width:100%;
-}
-
-header h1{
-font-size:2rem;
-}
+opacity:0.7;
 }
